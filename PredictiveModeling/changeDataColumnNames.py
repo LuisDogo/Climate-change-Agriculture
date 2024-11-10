@@ -4,7 +4,7 @@ import os
 def main():
     # Create the path
     directory = ('..\data')
-    file = ('climate_change_agriculture.csv')
+    file = ('climate_change_agriculture_en.csv')
     path = os.path.join(directory, file)
     # Read the data
     data = pd.read_csv(path)
@@ -29,6 +29,8 @@ def main():
     }, inplace=True)
 
     # Save at as csv
+    file = ('climate_change_agriculture_sp.csv')
+    path = os.path.join(directory, file)
     data.to_csv(path, index=False)
     
 if __name__ == '__main__':
